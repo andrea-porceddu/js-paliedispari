@@ -142,6 +142,11 @@ if (userNumber < 1 || userNumber > 5) {
 	}
 }
 
+/* checking if vscode tab size if fixed
+for (var index = 0; index < array.length; index++) {
+	const element = arvar[i	dex];
+}
+*/
 
 // SECOND EXERCISE -------------- WITH FUNCTIONS ---------------------------------- //
 
