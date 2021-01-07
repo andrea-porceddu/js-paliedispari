@@ -63,14 +63,23 @@ function strReverse(str) {
 	}
 	return strReversed;
 };
+
+function compareTwoStr(str1, str2) {
+	if (str1 === str2) {
+		return true;
+	} else {
+		return false
+	}
+}
+
 var inputStr = prompt('Inserisci parola');
 console.log('La parola inserita è: ' + inputStr);
 console.log('La parola invertita è: ' + strReverse(inputStr));
-if (inputStr === strReverse(inputStr)) {
+if (compareTwoStr(inputStr, strReverse(inputStr))) {
 	console.log('La parola è palindroma' );
 } else {
 	console.log('La parola non è palindroma');
-}
+};
 
 // FIRST EXERCISE -------------- WITH FUNCTIONS ----------------------------------- //
 
@@ -83,9 +92,9 @@ alert('Hai inserito il numero: ' + userChoise);
 if (userChoise < 1 || userChoise > 5) {
 	alert('Devi inserire un numero compreso tra 1 a 5');
 } else {
-	var randomMin = 1;
-	var randomMax = 5;
-	var randomNumber = Math.floor(Math.random() * (randomMax + 1 - randomMin) + randomMin);
+	var min = 1;
+	var max = 5;
+	var randomNumber = Math.floor(Math.random() * (min + 1 - min) + min);
 	alert('Il calcolatore ha randomizzato il numero: ' + randomNumber);
 	var sum = userChoise + randomNumber;
 	if (sum % 2 === 0) {
@@ -109,6 +118,14 @@ function sumTwoNumbers(a, b) {
 	return sum;
 }
 
+function isEven (num) {
+	if (num% 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 var userNumber = parseInt(prompt('Inserisci un numero compreso tra 1 e 5'));
 
 if (userNumber < 1 || userNumber > 5) {
@@ -118,7 +135,7 @@ if (userNumber < 1 || userNumber > 5) {
 	calculatorNumber = generateRandomNumber(1, 5);
 	console.log('Il calcolatore ha randomizzato il numero: ' + calculatorNumber);
 	sum = sumTwoNumbers(userNumber, calculatorNumber)
-	if (sum % 2 === 0) {
+	if (isEven(sum)) {
 		console.log('La somma è: ' + sum + ' pari');
 	} else {
 		console.log('La somma è: ' + sum + ' dispari');
