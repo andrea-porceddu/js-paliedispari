@@ -53,17 +53,16 @@ if (inputString === reverseString) {
 
 // FIRST EXERCISE -------------- WITH FUNCTIONS ----------------------------------- //
 
-// string to string-reverse function
+// string to string-reverse function - la stringa può essere ciclata come fosse un array
 function strReverse(str) {
-	strLength = str.length - 1;
-	arrayReverse = [];
-	for (var i = strLength; i >= 0; i--) {
-		arrayReverse.push(str.charAt(i));
-		strReversed = arrayReverse.join('');
+	strReversed = '';
+	for (var i = str.length - 1; i >= 0; i--) {
+		strReversed += str[i];
 	}
 	return strReversed;
 };
 
+// two strings compare function
 function compareTwoStr(str1, str2) {
 	if (str1 === str2) {
 		return true;
@@ -114,8 +113,7 @@ function generateRandomNumber(min, max) {
 };
 
 function sumTwoNumbers(a, b) {
-	sum = a + b;
-	return sum;
+	return a + b;
 }
 
 function isEven (num) {
